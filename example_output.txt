@@ -1,0 +1,404 @@
+nat (HOME-LAB,outside) source static any any destination static VPN_POOL VPN_POOL no-proxy-arp route-lookup
+
+{
+    "real_interface": "HOME-LAB",        
+    "mapped_interface": "outside",       
+    "nat_type": "static",
+    "real_source": "any",
+    "mapped_source": "any",
+    "real_destination": [
+        "object network VPN_POOL",       
+        "subnet 10.0.100.0 255.255.255.0"
+    ],
+    "mapped_destination": [
+        "object network VPN_POOL",       
+        "subnet 10.0.100.0 255.255.255.0"
+    ],
+    "service_type": null,
+    "real_service": null,
+    "mapped_service": null,
+    "no-proxy-arp": true,
+    "route-lookup": true,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp ssh 2222
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network MINECRAFT_SSH_5.2_2222_SSH",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "ssh",
+    "mapped_service": "2222",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 25565 25565
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network MINECRAFT_0.5.2_UDP_25565",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "25565",
+    "mapped_service": "25565",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 25565 25565
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network MINECRAFT_0.5.2_TDP_25565",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "25565",
+    "mapped_service": "25565",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 3074 3074
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network ASTRONEER_0.5.3_TCP_3074",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "3074",
+    "mapped_service": "3074",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 88 88
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network ASTRONEER_0.5.3_UDP_88",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "88",
+    "mapped_service": "88",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 3074 3074
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network ASTRONEER_0.5.3_UDP_3074",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "3074",
+    "mapped_service": "3074",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 3544 3544
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network ASTRONEER_0.5.3_UDP_3544",
+        "host 10.0.5.2"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "3544",
+    "mapped_service": "3544",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 2456 2456
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_TCP_2456",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "2456",
+    "mapped_service": "2456",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 2457 2457
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_TCP_2457",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "2457",
+    "mapped_service": "2457",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 2457 2457
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_TCP_2457",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "2457",
+    "mapped_service": "2457",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service tcp 2458 2458
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_TCP_2458",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "tcp",
+    "real_service": "2458",
+    "mapped_service": "2458",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 2456 2456
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_UDP_2456",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "2456",
+    "mapped_service": "2456",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 2457 2457
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_UDP_2457",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "2457",
+    "mapped_service": "2457",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 2458 2458
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_UDP_2458",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "2458",
+    "mapped_service": "2458",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+ nat (HOME-LAB,outside) static interface service udp 2458 2458
+
+{
+    "real_interface": "HOME-LAB",
+    "mapped_interface": "outside",
+    "nat_type": "static",
+    "real_source": [
+        "object network obj_0.5.3_UDP_2458",
+        "host 10.0.5.3"
+    ],
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": "udp",
+    "real_service": "2458",
+    "mapped_service": "2458",
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": false
+}
+
+
+
+
+nat (any,outside) after-auto source dynamic any interface
+
+{
+    "real_interface": "any",
+    "mapped_interface": "outside",
+    "nat_type": "dynamic",
+    "real_source": "any",
+    "mapped_source": "interface",
+    "real_destination": null,
+    "mapped_destination": null,
+    "service_type": null,
+    "real_service": null,
+    "mapped_service": null,
+    "no-proxy-arp": false,
+    "route-lookup": false,
+    "after-auto": true
+}

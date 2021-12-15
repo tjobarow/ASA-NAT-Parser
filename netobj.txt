@@ -1,0 +1,70 @@
+object network VPN_POOL
+ subnet 10.0.100.0 255.255.255.0
+object network 10.0.-obj
+ subnet 10.0.0.0 255.255.0.0
+object network 10.0.100.obj
+ subnet 10.0.100.0 255.255.255.0
+object network 10.0.8.1-Lab-P2P
+ host 10.0.8.1
+object network NETWORK_OBJ_10.0.100.0_24
+ subnet 10.0.100.0 255.255.255.0
+object service MINECRAFT_PORTS
+ service udp source eq 25565 
+object network EXT_IP
+ host 75.88.242.76
+object network MINECRAFT_HOST
+ host 10.0.5.2
+object network WIRED_SUBNET
+ subnet 10.0.2.0 255.255.255.0
+object network WIRELESS_SUBNET
+ subnet 10.0.7.0 255.255.255.0
+object network INFRA_SUBNET
+ subnet 10.0.4.0 255.255.255.0
+object network INFRA_DNS_4.6
+ host 10.0.4.6
+object service SSH
+object network MINECRAFT_SSH_5.2_2222_SSH
+ host 10.0.5.2
+object network MINECRAFT_0.5.2_UDP_25565
+ host 10.0.5.2
+object network MINECRAFT_0.5.2_TDP_25565
+ host 10.0.5.2
+object network 0.5.3_Windows_Steam
+ host 10.0.5.3
+object network ASTRONEER_0.5.3_TCP_3074
+ host 10.0.5.2
+object network ASTRONEER_0.5.3_UDP_88
+ host 10.0.5.2
+object network ASTRONEER_0.5.3_UDP_500
+ host 10.0.5.2
+object network ASTRONEER_0.5.3_UDP_3074
+ host 10.0.5.2
+object network ASTRONEER_0.5.3_UDP_3544
+ host 10.0.5.2
+object network ASTRONEER_0.5.3_UDP_4500
+ host 10.0.5.2
+object network obj_0.5.3_host
+ host 10.0.5.3
+object network obj_0.5.3_TCP_2456
+ host 10.0.5.3
+object network obj_0.5.3_TCP_2457
+ host 10.0.5.3
+object network obj_0.5.3_TCP_2458
+ host 10.0.5.3
+object network obj_0.5.3_UDP_2456
+ host 10.0.5.3
+object network obj_0.5.3_UDP_2457
+ host 10.0.5.3
+object network obj_0.5.3_UDP_2458
+ host 10.0.5.3
+object service obj_TCP_2456-58
+ service tcp destination range 2456 2458 
+object service obj_UDP_2456-58
+ service udp destination range 2456 2458 
+object network FTDv_Network
+ subnet 172.16.254.0 255.255.255.0
+object network obj_0.5.4_host
+ host 10.0.5.4
+object network TEST
+object network TESTINGNAT
+ host 121.122.1.234

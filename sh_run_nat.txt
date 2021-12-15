@@ -1,0 +1,32 @@
+nat (HOME-LAB,outside) source static any any destination static VPN_POOL VPN_POOL no-proxy-arp route-lookup
+!
+object network MINECRAFT_SSH_5.2_2222_SSH
+ nat (HOME-LAB,outside) static interface service tcp ssh 2222 
+object network MINECRAFT_0.5.2_UDP_25565
+ nat (HOME-LAB,outside) static interface service udp 25565 25565 
+object network MINECRAFT_0.5.2_TDP_25565
+ nat (HOME-LAB,outside) static interface service tcp 25565 25565 
+object network ASTRONEER_0.5.3_TCP_3074
+ nat (HOME-LAB,outside) static interface service tcp 3074 3074 
+object network ASTRONEER_0.5.3_UDP_88
+ nat (HOME-LAB,outside) static interface service udp 88 88 
+object network ASTRONEER_0.5.3_UDP_3074
+ nat (HOME-LAB,outside) static interface service udp 3074 3074 
+object network ASTRONEER_0.5.3_UDP_3544
+ nat (HOME-LAB,outside) static interface service udp 3544 3544 
+object network obj_0.5.3_TCP_2456
+ nat (HOME-LAB,outside) static interface service tcp 2456 2456 
+object network obj_0.5.3_TCP_2457
+ nat (HOME-LAB,outside) static interface service tcp 2457 2457
+ nat (HOME-LAB,outside) static interface service tcp 2457 2457 
+object network obj_0.5.3_TCP_2458
+ nat (HOME-LAB,outside) static interface service tcp 2458 2458 
+object network obj_0.5.3_UDP_2456
+ nat (HOME-LAB,outside) static interface service udp 2456 2456 
+object network obj_0.5.3_UDP_2457
+ nat (HOME-LAB,outside) static interface service udp 2457 2457 
+object network obj_0.5.3_UDP_2458
+ nat (HOME-LAB,outside) static interface service udp 2458 2458 
+ nat (HOME-LAB,outside) static interface service udp 2458 2458
+!
+nat (any,outside) after-auto source dynamic any interface
