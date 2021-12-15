@@ -1,4 +1,4 @@
-# ASA-Config-Parser
+# ASA-NAT-Parser
 
 Script that reads ASA "sh run nat" and "show run object" CLI outputs and parses the information into more easily readable format. Instead of having to skip back and forth between NAT statements and network/service objects, the script outputs both "at the same time". This makes it easier for engineers understand what an organization is doing with each NAT statement. 
 
